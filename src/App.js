@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import Stack from '@mui/material/Stack';
+import MuiAlert from '@mui/material/Alert';
+import { Typography } from '@mui/material';
+import x from "./x.png"
 
-function App() {
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
+ function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Stack spacing={0} sx={{ width: '90%' }} display={"flex"} flexDirection={"row"} justifyContent={"space-between"} margin={5} gap={10}>
+      <Alert severity="warning" color={"info"}  borderRadius={120}>
+        <Typography>Info Message</Typography>
+        <Typography>Some message</Typography>
+        <img src='./x.png' alt="" />
+        </Alert>
+      <Alert severity="warning" color={"success"}>Succes Message</Alert>
+      <Alert severity="warning" color={"warning"}>Warning Message</Alert>
+      <Alert severity="warning" color={"error"}>Error Message</Alert>
+    </Stack>
   );
 }
 
-export default App;
+export default App
