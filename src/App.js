@@ -3,6 +3,7 @@ import Stack from '@mui/material/Stack';
 import MuiAlert from '@mui/material/Alert';
 import { Typography } from '@mui/material';
 import x from "./x.png"
+import "./App.css"
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -11,30 +12,44 @@ const Alert = React.forwardRef(function Alert(props, ref) {
  function App() {
  
   return (
-    <Stack spacing={0} sx={{ width: '90%' }} display={"flex"} flexDirection={"row"} justifyContent={"space-between"} margin={5} >
-    
-     <Alert severity="warning" color={"info"} >
-        <Typography>Info Message</Typography>
-        <Typography>Some message</Typography>
+    <Stack spacing={0} sx={{ width: '90%' }} display={"flex"} direction={"row"} justifyContent={"space-between"} margin={5} borderRadius={"12px"}>
+      
+     <Alert severity="warning" color={"info"} justify={"center"} >
+      <Typography>  
+      <p>Info Message</p>
+      <p>Some message</p>
+      </Typography>
+       <img src={x} alt="" />
+        </Alert>
+
+        <Alert severity="warning" color={"success"}>
+        <Typography><p>Succes Message</p><p>Some message</p></Typography>
         <img src={x} alt="" />
         </Alert>
-      <Alert severity="warning" color={"success"}>
-        <Typography>Succes Message</Typography>
-        <Typography>Some message</Typography>
-        <img src={x} alt="" />
-        </Alert>
+
+        
       <Alert severity="warning" color={"warning"}>
-        <Typography>Warning Message</Typography>
-      <Typography>Some message</Typography>
+
+        <Typography><p>Warning Message</p><p>Some message</p></Typography>
+    
       <img src={x} alt="" />
       </Alert>
+
       <Alert severity="warning" color={"error"}>
-        <Typography>Error Message</Typography>
-      <Typography>Some message</Typography>
+        <Typography><p>Error Message</p><p>Some message</p></Typography>
       <img src={x} alt="" />
       </Alert>
+
     </Stack>
   );
 }
 
 export default App
+
+
+/*
+Note: 
+
+Nu reusesc sa dau border radius de 12 px !!! Vad ce se prescrie border-radiusul !
+
+*/

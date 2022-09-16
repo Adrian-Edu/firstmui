@@ -1,0 +1,25 @@
+
+
+.css-1ytlwq5-MuiAlert-icon  {
+    align-items: center;
+    justify-content: center;
+    margin: 10px
+}
+
+.MuiAlert-message {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 20px;
+}
+
+.MuiAlert-message > img {
+  width: 22px;
+  height: 22px;
+  padding: 15px 0 0 90px;
+}
+
+.css-1othqhp-MuiPaper-root-MuiAlert-root {
+    border: 1px solid black;
+    border-radius: 12px;
+}
