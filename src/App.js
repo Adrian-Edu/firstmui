@@ -11,15 +11,28 @@ const Alert = React.forwardRef(function Alert(props, ref) {
  function App() {
  
   return (
-    <Stack spacing={0} sx={{ width: '90%' }} display={"flex"} flexDirection={"row"} justifyContent={"space-between"} margin={5} gap={10}>
-      <Alert severity="warning" color={"info"}  borderRadius={120}>
+    <Stack spacing={0} sx={{ width: '90%' }} display={"flex"} flexDirection={"row"} justifyContent={"space-between"} margin={5} >
+    
+     <Alert severity="warning" color={"info"} >
         <Typography>Info Message</Typography>
         <Typography>Some message</Typography>
-        <img src='./x.png' alt="" />
+        <img src={x} alt="" />
         </Alert>
-      <Alert severity="warning" color={"success"}>Succes Message</Alert>
-      <Alert severity="warning" color={"warning"}>Warning Message</Alert>
-      <Alert severity="warning" color={"error"}>Error Message</Alert>
+      <Alert severity="warning" color={"success"}>
+        <Typography>Succes Message</Typography>
+        <Typography>Some message</Typography>
+        <img src={x} alt="" />
+        </Alert>
+      <Alert severity="warning" color={"warning"}>
+        <Typography>Warning Message</Typography>
+      <Typography>Some message</Typography>
+      <img src={x} alt="" />
+      </Alert>
+      <Alert severity="warning" color={"error"}>
+        <Typography>Error Message</Typography>
+      <Typography>Some message</Typography>
+      <img src={x} alt="" />
+      </Alert>
     </Stack>
   );
 }
