@@ -86,10 +86,3 @@ function App() {
 }
 
 export default App;
-
-/*
-Note: 
-
-Nu reusesc sa dau border radius de 12 px !!! Vad ce se prescrie border-radiusul !
-
-*/
